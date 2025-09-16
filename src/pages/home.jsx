@@ -3,6 +3,7 @@ import CoinCard from "../components/CoinCard.jsx";
 import FilterInput from "../components/FilterInput.jsx";
 import SortSelector from "../components/SortSelector.jsx";
 import LimitSelector from "../components/LimitSelector.jsx";
+import Spinner from "../components/Spainner.jsx";
 
 function Home({coins, filter, setFilter,limit,setLimit,sortBy,setSortBy,loading,error}) {
     const filteredCoins = coins.filter((coin) => {
@@ -33,7 +34,7 @@ function Home({coins, filter, setFilter,limit,setLimit,sortBy,setSortBy,loading,
         <>
             <h1> Crypto App </h1>
 
-            {loading && <p>Loading........</p>}
+            {loading && <Spinner/>}
             {error && <span className="error">{error}</span>}
 
             <div className="top-controls">
