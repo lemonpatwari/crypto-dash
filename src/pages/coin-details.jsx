@@ -20,7 +20,6 @@ const CoinDetails = () => {
                 }
                 const data = await res.json();
                 setCoin(data);
-                console.log(data)
                 setLoading(false);
             } catch (error) {
                 setError(error.message);
